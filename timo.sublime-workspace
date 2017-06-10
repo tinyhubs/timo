@@ -1,0 +1,267 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"timo_error_param_add",
+				"timo_error_param_add_imp"
+			],
+			[
+				"timo_err",
+				"timo_error_param"
+			],
+			[
+				"TIMO",
+				"TIMO_ASSERT"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "import socket\nimport time\nimport datetime\n\n\n######################################################################\n#   portocal defined\n#   (1) format:     LLLLLSSSSSSSSIIIIIIIIDDDD....\n#   (2) max length: 9999\n######################################################################\n\n######################################################################\n#   define some const\nMSG_LEN_LIMIT=9999\n\n\n######################################################################\n#   write log\ndef log(text):\n    print (str(datetime.datetime.now()) + ',' + text)\n\n\n######################################################################\ndef server():\n    #   create server side socket\n    ser = socket.socket(socket.AF_INET,socket.SOCK_STREAM)\n    ser.bind(('127.0.0.1', 8002))\n    ser.listen(5)\n\n    while 1:\n        #   accept one client socket \n        client,addr=ser.accept()\n\n        log('Info,accept %s connect'%(addr,))\n\n        while 1:\n            try:\n                #   recv  message\n                msgLen      = client.recv(5)\n                if len(msgLen) <= 0:\n                    break;\n                if int(msgLen, 10) > MSG_LEN_LIMIT:\n                    log('Warning,message length error,' + msgLen)\n                    break;\n                sessionId   = client.recv(8)\n                msgIndex    = client.recv(8)\n                #msgData     = client.recv(1024)#int(msgLen, 10))\n                msgData     = client.recv(int(msgLen, 10))\n\n                log('R:[' + msgLen + sessionId + msgIndex + msgData + ']')\n\n                #   reply message\n                client.send(msgLen + sessionId + msgIndex + msgData)\n            except socket.timeout:\n                log('Warning,send or recv timeout,')\n                continue\n            except socket.error:\n                log('Warning,socket error,')\n                break\n\n        log('Warning,socket closed,%s'%(addr,))我是\n        client.close()\n\n######################################################################\nserver()\n",
+			"file": "/E/dev/nc/s.py",
+			"file_size": 2064,
+			"file_write_time": 130737412801861706,
+			"settings":
+			{
+				"buffer_size": 2001,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/dev/nc/c.py",
+			"settings":
+			{
+				"buffer_size": 3478,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 160.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/dev/nc/t.py",
+		"/E/dev/timo/src/timo_error.cpp",
+		"/E/dev/timo/src/timo_error.h",
+		"/E/dev/nc/c.py",
+		"/E/dev/nc/s.py",
+		"/E/dev/timo/src/timo_error_param.h",
+		"/E/dev/timo/src/timo_error_param.cpp",
+		"/E/dev/timo/src/timo_libc",
+		"/E/dev/timo/src/timo_libc.cpp",
+		"/E/dev/timo/src/timo_libc.h",
+		"/E/dev/timo/src/timo_type.h",
+		"/E/dev/timo/src/timo_input.h",
+		"/E/dev/timo/src/timoc_main.cpp",
+		"/E/dev/timo/src/timo_lex.cpp",
+		"/E/dev/timo/src/timo_lex.h",
+		"/E/dev/timo/src/timo_input.cpp",
+		"/E/dev/timo/src/timo_error_table.h",
+		"/C/Users/lenovo/Desktop/lua-5.3.0/lua-5.3.0/src/lcode.c",
+		"/E/dev/fort/libssh-0.6.4/include/libssh/server.h",
+		"/E/dev/autotest/mainloop.py",
+		"/E/dev/autotest/MainFrame.py",
+		"/C/Users/lenovo/Desktop/无标题2.txt"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"MSG_TIME_OUT",
+			"msgData",
+			"timo_error_param_size_imp",
+			"timo_error_param_get_imp",
+			"timo_error_param_free_imp",
+			"timo_error_param_add_imp",
+			"timo_error_param_malloc_imp",
+			"void"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"MSG_TIMEOUT"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/E/dev/nc/s.py",
+					"settings":
+					{
+						"buffer_size": 2001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								390,
+								394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/E/dev/nc/c.py",
+					"settings":
+					{
+						"buffer_size": 3478,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								369,
+								369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.884551013839,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 130.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 171.0,
+	"status_bar_visible": true
+}

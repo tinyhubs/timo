@@ -1,0 +1,40 @@
+"timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)timo_int    accept_float_postfix(modifiable notnull timo_lex* lex)"
+# this is a commet
+
+import timo.stdio
+
+var a = 1
+var b = 12;
+var cc = null
+
+if a < 3
+{
+    print("a=" + a);
+}
+
+for var i : [1,2,3,4]
+{
+    print("item" + i + ":" + 2 * 3 + "\n");
+}
+
+#var num = 0x123 * -1 + 0.122e+12
+
+1.e2       OK
+1.2        OK
+#1.2e       ERROR
+#1.2e+       ERROR
+1.2e+1      OK
+1.          OKint ebp
+#1e         ERROR
+#1e+        ERROR
+1e12       OK
+1e+12      OK
+12.size()   OK
+12.e3       OK
+12.[0-9]+[ [eE][+-][0-9] ]
+(v1, v2) = test_func();!
+0b1
+#0b
+#0t
+#0t9
+

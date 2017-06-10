@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{aa484514-5c78-49dd-a6e2-3aa3bdc42243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{b46269a1-8ecb-4b25-a4fc-b38624c9f1f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{bce87e5c-85b2-4148-88dd-62439d704a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{6f8f9316-6d12-4207-8990-d326f19db67b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{b1af0e84-2f2e-4cb0-9965-8ba87de2889a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="readme.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\yax.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_array.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_buffer.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_libc.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_list.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_map.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_tree.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utils\timo_type.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_error.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_error_table.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_lex.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_limit.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_source.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_symbol.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_token.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_token_table.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_syntax.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_scope.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\timo_synode.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="simple\test_zero.timo" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\utils\timo_array.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\timo_buffer.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\timo_libc.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\timo_list.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\timo_map.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\timo_tree.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_error.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_lex.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_source_file.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_source_string.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_symbol.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_token.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timoc_main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_syntax.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_scope.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\timo_synode.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
